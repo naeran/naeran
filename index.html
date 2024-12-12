@@ -1,1113 +1,120 @@
-<html lang="ko"><head>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:title" content="국민의힘 탄핵안 불참자 리스트">
     <meta property="og:description" content="2024년 12월 7일 국민의힘 탄핵안 불참자 리스트">
     <meta property="og:image" content="https://www.assembly.go.kr/static/portal/img/img_assemblyCi_02.gif">
     <meta property="og:url" content="https://neran24.info">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>국민의힘 탄핵안 불참자 리스트</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/styles/styles.css">
+    <style>
+        .card {
+            border: none;
+            margin: 0 auto;
+            width: 140px;
+            cursor: pointer;
+        }
+        .col {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0.25rem !important;
+        }
+        .card-text {
+            font-size: 0.8rem;
+            word-break: keep-all;
+            text-align: center;
+            white-space: pre-line;
+            margin-bottom: 0;
+        }
+        .card-img-top {
+            width: 120px;
+            height: 133px;
+            object-fit: cover;
+            margin: 0 auto;
+            display: block;
+        }
+        .card-body {
+            padding: 0.5rem;
+        }
+        .card-title {
+            margin-bottom: 0.25rem;
+            font-size: 1rem;
+        }
+        .hidden {
+            display: none !important;
+        }
+        .search-container {
+            margin-bottom: 10px;
+            padding-top: 10px;
+        }
+        .search-container .col-md-6 {
+            margin-bottom: 10px;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            z-index: 1000;
+        }
+        .modal-content {
+            position: relative;
+            background-color: #fff;
+            margin: 10% auto;
+            padding: 20px;
+            width: 90%;
+            max-width: 1000px;
+            border-radius: 5px;
+        }
+        .close {
+            position: absolute;
+            right: 20px;
+            top: 10px;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .modal-image {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+        }
+        @media (max-width: 767px) {
+            .modal .col-md-5, .modal .col-md-7 {
+                margin-top: 5px;
+            }
+        }
+    </style>
 </head>
 <body>
+    <!-- Header -->
     <header class="bg-black text-white py-2">
         <div class="container">
-            <h2 class="mb-0">역사는 기억한다 │ <a href="/list/1207.html" class="text-white text-decoration-none">12.07</a></h2>
+            <h2 class="mb-0">역사는 기억한다 <span style="font-size: 1.2em; vertical-align: middle;">│</span> <a href="/list/1207.html" class="text-white text-decoration-none">12.07</a></h2>
         </div>
     </header>
+
+    <!-- Hero Section -->
     <div class="bg-dark text-white py-5 mb-3">
         <div class="container">
-            <h1 class="display-4 text-center">2024년 12월 7일<br>국민의힘 탄핵안<br>불참자 리스트</h1>
+            <h1 class="display-4 text-center">2024년 12월 7일<br>국민의힘 탄핵안<br>불참자 리스트<br>108명 중 105명 불참</h1>
         </div>
-    </div>
-    <div class="container search-container">
-        <div class="row">
-            <div class="col-md-4">
-                <input type="text" id="nameSearch" class="form-control" placeholder="이름으로 검색">
-            </div>
-            <div class="col-md-4">
-                <select id="regionSelect" class="form-control">
-                    <option value="">지역 선택</option>
-                    <option value="강원">강원</option>
-                    <option value="경기">경기</option>
-                    <option value="경남">경남</option>
-                    <option value="경북">경북</option>
-                    <option value="대구">대구</option>
-                    <option value="부산">부산</option>
-                    <option value="비례대표">비례대표</option>
-                    <option value="서울">서울</option>
-                    <option value="울산">울산</option>
-                    <option value="인천">인천</option>
-                    <option value="충남">충남</option>
-                    <option value="충북">충북</option>
-                </select>
-            </div>
-            <div class="col-md-4">
-                <input type="text" id="districtSearch" class="form-control" placeholder="지역구로 검색">
-            </div>
-        </div>
-    </div>    
-    <div class="container">
-        <div id="cardContainer" class="row row-cols-2 row-cols-md-4 g-2"><div class="col">
-            <div class="card">
-                <img src="./assets/images/강대식_대구 동구군위을.png" alt="강대식" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">강대식</h5>
-                    <p class="card-text">
-                        <span class="card-region">대구</span> 
-                        <span class="card-district">동구군위을</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/강명구_경북 구미을.png" alt="강명구" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">강명구</h5>
-                    <p class="card-text">
-                        <span class="card-region">경북</span> 
-                        <span class="card-district">구미을</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/강민국_경남 진주을.png" alt="강민국" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">강민국</h5>
-                    <p class="card-text">
-                        <span class="card-region">경남</span> 
-                        <span class="card-district">진주을</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/강선영_비례대표.png" alt="강선영" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">강선영</h5>
-                    <p class="card-text">
-                        <span class="card-region">비례대표</span> 
-                        <span class="card-district">비례대표</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/강승규_충남 홍성예산.png" alt="강승규" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">강승규</h5>
-                    <p class="card-text">
-                        <span class="card-region">충남</span> 
-                        <span class="card-district">홍성예산</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/고동진_서울 강남병.png" alt="고동진" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">고동진</h5>
-                    <p class="card-text">
-                        <span class="card-region">서울</span> 
-                        <span class="card-district">강남병</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/곽규택_부산 서동.png" alt="곽규택" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">곽규택</h5>
-                    <p class="card-text">
-                        <span class="card-region">부산</span> 
-                        <span class="card-district">서동</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/구자근_경북 구미갑.png" alt="구자근" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">구자근</h5>
-                    <p class="card-text">
-                        <span class="card-region">경북</span> 
-                        <span class="card-district">구미갑</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/권성동_강원 강릉.png" alt="권성동" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">권성동</h5>
-                    <p class="card-text">
-                        <span class="card-region">강원</span> 
-                        <span class="card-district">강릉</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/권영세_서울 용산.png" alt="권영세" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">권영세</h5>
-                    <p class="card-text">
-                        <span class="card-region">서울</span> 
-                        <span class="card-district">용산</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/권영진_대구 달서병.png" alt="권영진" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">권영진</h5>
-                    <p class="card-text">
-                        <span class="card-region">대구</span> 
-                        <span class="card-district">달서병</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/김건_비례대표.png" alt="김건" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">김건</h5>
-                    <p class="card-text">
-                        <span class="card-region">비례대표</span> 
-                        <span class="card-district">비례대표</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/김기웅_대구 중남.png" alt="김기웅" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">김기웅</h5>
-                    <p class="card-text">
-                        <span class="card-region">대구</span> 
-                        <span class="card-district">중남</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/김기현_울산 남구을.png" alt="김기현" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">김기현</h5>
-                    <p class="card-text">
-                        <span class="card-region">울산</span> 
-                        <span class="card-district">남구을</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/김대식_부산 사상.png" alt="김대식" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">김대식</h5>
-                    <p class="card-text">
-                        <span class="card-region">부산</span> 
-                        <span class="card-district">사상</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/김도읍_부산 강서.png" alt="김도읍" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">김도읍</h5>
-                    <p class="card-text">
-                        <span class="card-region">부산</span> 
-                        <span class="card-district">강서</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/김미애_부산 해운대을.png" alt="김미애" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">김미애</h5>
-                    <p class="card-text">
-                        <span class="card-region">부산</span> 
-                        <span class="card-district">해운대을</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/김민전_비례대표.png" alt="김민전" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">김민전</h5>
-                    <p class="card-text">
-                        <span class="card-region">비례대표</span> 
-                        <span class="card-district">비례대표</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/김상훈_대구 서.png" alt="김상훈" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">김상훈</h5>
-                    <p class="card-text">
-                        <span class="card-region">대구</span> 
-                        <span class="card-district">서</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/김석기_경북 경주.png" alt="김석기" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">김석기</h5>
-                    <p class="card-text">
-                        <span class="card-region">경북</span> 
-                        <span class="card-district">경주</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/김선교_경기 여주양평.png" alt="김선교" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">김선교</h5>
-                    <p class="card-text">
-                        <span class="card-region">경기</span> 
-                        <span class="card-district">여주양평</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/김성원_경기 동두천양주연천을.png" alt="김성원" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">김성원</h5>
-                    <p class="card-text">
-                        <span class="card-region">경기</span> 
-                        <span class="card-district">동두천양주연천을</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/김소희_비례대표.png" alt="김소희" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">김소희</h5>
-                    <p class="card-text">
-                        <span class="card-region">비례대표</span> 
-                        <span class="card-district">비례대표</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/김승수_대구 북구을.png" alt="김승수" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">김승수</h5>
-                    <p class="card-text">
-                        <span class="card-region">대구</span> 
-                        <span class="card-district">북구을</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/김용태_경기 포천가평.png" alt="김용태" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">김용태</h5>
-                    <p class="card-text">
-                        <span class="card-region">경기</span> 
-                        <span class="card-district">포천가평</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/김위상_비례대표.png" alt="김위상" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">김위상</h5>
-                    <p class="card-text">
-                        <span class="card-region">비례대표</span> 
-                        <span class="card-district">비례대표</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/김은혜_경기 성남분당을.png" alt="김은혜" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">김은혜</h5>
-                    <p class="card-text">
-                        <span class="card-region">경기</span> 
-                        <span class="card-district">성남분당을</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/김장겸_비례대표.png" alt="김장겸" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">김장겸</h5>
-                    <p class="card-text">
-                        <span class="card-region">비례대표</span> 
-                        <span class="card-district">비례대표</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/김재섭_서울 도봉갑.png" alt="김재섭" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">김재섭</h5>
-                    <p class="card-text">
-                        <span class="card-region">서울</span> 
-                        <span class="card-district">도봉갑</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/김정재_경북 포항북.png" alt="김정재" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">김정재</h5>
-                    <p class="card-text">
-                        <span class="card-region">경북</span> 
-                        <span class="card-district">포항북</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/김종양_경남 창원의창.png" alt="김종양" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">김종양</h5>
-                    <p class="card-text">
-                        <span class="card-region">경남</span> 
-                        <span class="card-district">창원의창</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/김태호_경남 양산을.png" alt="김태호" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">김태호</h5>
-                    <p class="card-text">
-                        <span class="card-region">경남</span> 
-                        <span class="card-district">양산을</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/김형동_경북 안동예천.png" alt="김형동" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">김형동</h5>
-                    <p class="card-text">
-                        <span class="card-region">경북</span> 
-                        <span class="card-district">안동예천</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/김희정_부산 연제.png" alt="김희정" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">김희정</h5>
-                    <p class="card-text">
-                        <span class="card-region">부산</span> 
-                        <span class="card-district">연제</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/나경원_서울 동작을.png" alt="나경원" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">나경원</h5>
-                    <p class="card-text">
-                        <span class="card-region">서울</span> 
-                        <span class="card-district">동작을</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/박대출_경남 진주갑.png" alt="박대출" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">박대출</h5>
-                    <p class="card-text">
-                        <span class="card-region">경남</span> 
-                        <span class="card-district">진주갑</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/박덕흠_충북 보은옥천영동괴산.png" alt="박덕흠" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">박덕흠</h5>
-                    <p class="card-text">
-                        <span class="card-region">충북</span> 
-                        <span class="card-district">보은옥천영동괴산</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/박상웅_경남 밀양의령함안창녕.png" alt="박상웅" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">박상웅</h5>
-                    <p class="card-text">
-                        <span class="card-region">경남</span> 
-                        <span class="card-district">밀양의령함안창녕</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/박성민_울산 중.png" alt="박성민" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">박성민</h5>
-                    <p class="card-text">
-                        <span class="card-region">울산</span> 
-                        <span class="card-district">중</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/박성훈_부산 북구을.png" alt="박성훈" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">박성훈</h5>
-                    <p class="card-text">
-                        <span class="card-region">부산</span> 
-                        <span class="card-district">북구을</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/박수민_서울 강남을.png" alt="박수민" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">박수민</h5>
-                    <p class="card-text">
-                        <span class="card-region">서울</span> 
-                        <span class="card-district">강남을</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/박수영_부산 남.png" alt="박수영" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">박수영</h5>
-                    <p class="card-text">
-                        <span class="card-region">부산</span> 
-                        <span class="card-district">남</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/박정하_강원 원주갑.png" alt="박정하" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">박정하</h5>
-                    <p class="card-text">
-                        <span class="card-region">강원</span> 
-                        <span class="card-district">원주갑</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/박정훈_서울 송파갑.png" alt="박정훈" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">박정훈</h5>
-                    <p class="card-text">
-                        <span class="card-region">서울</span> 
-                        <span class="card-district">송파갑</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/박준태_비례대표.png" alt="박준태" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">박준태</h5>
-                    <p class="card-text">
-                        <span class="card-region">비례대표</span> 
-                        <span class="card-district">비례대표</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/박충권_비례대표.png" alt="박충권" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">박충권</h5>
-                    <p class="card-text">
-                        <span class="card-region">비례대표</span> 
-                        <span class="card-district">비례대표</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/박형수_경북 의성청송영덕울진.png" alt="박형수" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">박형수</h5>
-                    <p class="card-text">
-                        <span class="card-region">경북</span> 
-                        <span class="card-district">의성청송영덕울진</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/배준영_인천 중강화옹진.png" alt="배준영" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">배준영</h5>
-                    <p class="card-text">
-                        <span class="card-region">인천</span> 
-                        <span class="card-district">중강화옹진</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/배현진_서울 송파을.png" alt="배현진" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">배현진</h5>
-                    <p class="card-text">
-                        <span class="card-region">서울</span> 
-                        <span class="card-district">송파을</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/백종헌_부산 금정.png" alt="백종헌" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">백종헌</h5>
-                    <p class="card-text">
-                        <span class="card-region">부산</span> 
-                        <span class="card-district">금정</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/서명옥_서울 강남갑.png" alt="서명옥" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">서명옥</h5>
-                    <p class="card-text">
-                        <span class="card-region">서울</span> 
-                        <span class="card-district">강남갑</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/서범수_울산 울주.png" alt="서범수" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">서범수</h5>
-                    <p class="card-text">
-                        <span class="card-region">울산</span> 
-                        <span class="card-district">울주</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/서일준_경남 거제.png" alt="서일준" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">서일준</h5>
-                    <p class="card-text">
-                        <span class="card-region">경남</span> 
-                        <span class="card-district">거제</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/서지영_부산 동래.png" alt="서지영" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">서지영</h5>
-                    <p class="card-text">
-                        <span class="card-region">부산</span> 
-                        <span class="card-district">동래</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/서천호_경남 사천남해하동.png" alt="서천호" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">서천호</h5>
-                    <p class="card-text">
-                        <span class="card-region">경남</span> 
-                        <span class="card-district">사천남해하동</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/성일종_충남 서산태안.png" alt="성일종" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">성일종</h5>
-                    <p class="card-text">
-                        <span class="card-region">충남</span> 
-                        <span class="card-district">서산태안</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/송석준_경기 이천.png" alt="송석준" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">송석준</h5>
-                    <p class="card-text">
-                        <span class="card-region">경기</span> 
-                        <span class="card-district">이천</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/송언석_경북 김천.png" alt="송언석" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">송언석</h5>
-                    <p class="card-text">
-                        <span class="card-region">경북</span> 
-                        <span class="card-district">김천</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/신동욱_서울 서초을.png" alt="신동욱" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">신동욱</h5>
-                    <p class="card-text">
-                        <span class="card-region">서울</span> 
-                        <span class="card-district">서초을</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/신성범_경남 산청함양거창합천.png" alt="신성범" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">신성범</h5>
-                    <p class="card-text">
-                        <span class="card-region">경남</span> 
-                        <span class="card-district">산청함양거창합천</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/안상훈_비례대표.png" alt="안상훈" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">안상훈</h5>
-                    <p class="card-text">
-                        <span class="card-region">비례대표</span> 
-                        <span class="card-district">비례대표</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/엄태영_충북 제천단양.png" alt="엄태영" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">엄태영</h5>
-                    <p class="card-text">
-                        <span class="card-region">충북</span> 
-                        <span class="card-district">제천단양</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/우재준_대구 북구갑.png" alt="우재준" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">우재준</h5>
-                    <p class="card-text">
-                        <span class="card-region">대구</span> 
-                        <span class="card-district">북구갑</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/유상범_강원 홍천횡성영월평창.png" alt="유상범" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">유상범</h5>
-                    <p class="card-text">
-                        <span class="card-region">강원</span> 
-                        <span class="card-district">홍천횡성영월평창</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/유영하_대구 달서갑.png" alt="유영하" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">유영하</h5>
-                    <p class="card-text">
-                        <span class="card-region">대구</span> 
-                        <span class="card-district">달서갑</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/유용원_비례대표.png" alt="유용원" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">유용원</h5>
-                    <p class="card-text">
-                        <span class="card-region">비례대표</span> 
-                        <span class="card-district">비례대표</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/윤상현_인천 동미추홀을.png" alt="윤상현" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">윤상현</h5>
-                    <p class="card-text">
-                        <span class="card-region">인천</span> 
-                        <span class="card-district">동미추홀을</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/윤영석_경남 양산갑.png" alt="윤영석" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">윤영석</h5>
-                    <p class="card-text">
-                        <span class="card-region">경남</span> 
-                        <span class="card-district">양산갑</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/윤재옥_대구 달서을.png" alt="윤재옥" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">윤재옥</h5>
-                    <p class="card-text">
-                        <span class="card-region">대구</span> 
-                        <span class="card-district">달서을</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/윤한홍_경남 창원마산회원.png" alt="윤한홍" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">윤한홍</h5>
-                    <p class="card-text">
-                        <span class="card-region">경남</span> 
-                        <span class="card-district">창원마산회원</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/이달희_비례대표.png" alt="이달희" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">이달희</h5>
-                    <p class="card-text">
-                        <span class="card-region">비례대표</span> 
-                        <span class="card-district">비례대표</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/이만희_경북 영천청도.png" alt="이만희" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">이만희</h5>
-                    <p class="card-text">
-                        <span class="card-region">경북</span> 
-                        <span class="card-district">영천청도</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/이상휘_경북 포항남울릉.png" alt="이상휘" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">이상휘</h5>
-                    <p class="card-text">
-                        <span class="card-region">경북</span> 
-                        <span class="card-district">포항남울릉</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/이성권_부산 사하갑.png" alt="이성권" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">이성권</h5>
-                    <p class="card-text">
-                        <span class="card-region">부산</span> 
-                        <span class="card-district">사하갑</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/이양수_강원 속초인제고성양양.png" alt="이양수" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">이양수</h5>
-                    <p class="card-text">
-                        <span class="card-region">강원</span> 
-                        <span class="card-district">속초인제고성양양</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/이인선_대구 수성을.png" alt="이인선" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">이인선</h5>
-                    <p class="card-text">
-                        <span class="card-region">대구</span> 
-                        <span class="card-district">수성을</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/이종배_충북 충주.png" alt="이종배" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">이종배</h5>
-                    <p class="card-text">
-                        <span class="card-region">충북</span> 
-                        <span class="card-district">충주</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/이종욱_경남 창원진해.png" alt="이종욱" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">이종욱</h5>
-                    <p class="card-text">
-                        <span class="card-region">경남</span> 
-                        <span class="card-district">창원진해</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/이철규_강원 동해태백삼척정선.png" alt="이철규" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">이철규</h5>
-                    <p class="card-text">
-                        <span class="card-region">강원</span> 
-                        <span class="card-district">동해태백삼척정선</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/이헌승_부산 부산진을.png" alt="이헌승" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">이헌승</h5>
-                    <p class="card-text">
-                        <span class="card-region">부산</span> 
-                        <span class="card-district">부산진을</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/인요한_비례대표.png" alt="인요한" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">인요한</h5>
-                    <p class="card-text">
-                        <span class="card-region">비례대표</span> 
-                        <span class="card-district">비례대표</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/임이자_경북 상주문경.png" alt="임이자" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">임이자</h5>
-                    <p class="card-text">
-                        <span class="card-region">경북</span> 
-                        <span class="card-district">상주문경</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/임종득_경북 영주영양봉화.png" alt="임종득" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">임종득</h5>
-                    <p class="card-text">
-                        <span class="card-region">경북</span> 
-                        <span class="card-district">영주영양봉화</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/장동혁_충남 보령서천.png" alt="장동혁" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">장동혁</h5>
-                    <p class="card-text">
-                        <span class="card-region">충남</span> 
-                        <span class="card-district">보령서천</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/정동만_부산 기장.png" alt="정동만" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">정동만</h5>
-                    <p class="card-text">
-                        <span class="card-region">부산</span> 
-                        <span class="card-district">기장</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/정성국_부산 부산진갑.png" alt="정성국" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">정성국</h5>
-                    <p class="card-text">
-                        <span class="card-region">부산</span> 
-                        <span class="card-district">부산진갑</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/정연욱_부산 수영.png" alt="정연욱" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">정연욱</h5>
-                    <p class="card-text">
-                        <span class="card-region">부산</span> 
-                        <span class="card-district">수영</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/정점식_경남 통영고성.png" alt="정점식" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">정점식</h5>
-                    <p class="card-text">
-                        <span class="card-region">경남</span> 
-                        <span class="card-district">통영고성</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/정희용_경북 고령성주칠곡.png" alt="정희용" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">정희용</h5>
-                    <p class="card-text">
-                        <span class="card-region">경북</span> 
-                        <span class="card-district">고령성주칠곡</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/조경태_부산 사하을.png" alt="조경태" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">조경태</h5>
-                    <p class="card-text">
-                        <span class="card-region">부산</span> 
-                        <span class="card-district">사하을</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/조배숙_비례대표.png" alt="조배숙" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">조배숙</h5>
-                    <p class="card-text">
-                        <span class="card-region">비례대표</span> 
-                        <span class="card-district">비례대표</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/조승환_부산 중영도.png" alt="조승환" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">조승환</h5>
-                    <p class="card-text">
-                        <span class="card-region">부산</span> 
-                        <span class="card-district">중영도</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/조은희_서울 서초갑.png" alt="조은희" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">조은희</h5>
-                    <p class="card-text">
-                        <span class="card-region">서울</span> 
-                        <span class="card-district">서초갑</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/조정훈_서울 마포갑.png" alt="조정훈" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">조정훈</h5>
-                    <p class="card-text">
-                        <span class="card-region">서울</span> 
-                        <span class="card-district">마포갑</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/조지연_경북 경산.png" alt="조지연" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">조지연</h5>
-                    <p class="card-text">
-                        <span class="card-region">경북</span> 
-                        <span class="card-district">경산</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/주진우_부산 해운대갑.png" alt="주진우" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">주진우</h5>
-                    <p class="card-text">
-                        <span class="card-region">부산</span> 
-                        <span class="card-district">해운대갑</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/주호영_대구 수성갑.png" alt="주호영" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">주호영</h5>
-                    <p class="card-text">
-                        <span class="card-region">대구</span> 
-                        <span class="card-district">수성갑</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/진종오_비례대표.png" alt="진종오" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">진종오</h5>
-                    <p class="card-text">
-                        <span class="card-region">비례대표</span> 
-                        <span class="card-district">비례대표</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/최보윤_비례대표.png" alt="최보윤" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">최보윤</h5>
-                    <p class="card-text">
-                        <span class="card-region">비례대표</span> 
-                        <span class="card-district">비례대표</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/최수진_비례대표.png" alt="최수진" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">최수진</h5>
-                    <p class="card-text">
-                        <span class="card-region">비례대표</span> 
-                        <span class="card-district">비례대표</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/최은석_대구 동구군위갑.png" alt="최은석" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">최은석</h5>
-                    <p class="card-text">
-                        <span class="card-region">대구</span> 
-                        <span class="card-district">동구군위갑</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/최형두_경남 창원마산합포.png" alt="최형두" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">최형두</h5>
-                    <p class="card-text">
-                        <span class="card-region">경남</span> 
-                        <span class="card-district">창원마산합포</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/추경호_대구 달성.png" alt="추경호" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">추경호</h5>
-                    <p class="card-text">
-                        <span class="card-region">대구</span> 
-                        <span class="card-district">달성</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/한기호_강원 춘천철원화천양구을.png" alt="한기호" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">한기호</h5>
-                    <p class="card-text">
-                        <span class="card-region">강원</span> 
-                        <span class="card-district">춘천철원화천양구을</span>
-                    </p>
-                </div>
-            </div></div><div class="col">
-            <div class="card">
-                <img src="./assets/images/한지아_비례대표.png" alt="한지아" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">한지아</h5>
-                    <p class="card-text">
-                        <span class="card-region">비례대표</span> 
-                        <span class="card-district">비례대표</span>
-                    </p>
-                </div>
-            </div></div></div>
     </div>
 
-    <!-- 팝업 모달 -->
-    <div id="memberModal" class="modal" style="display: none;">
+    <!-- Modal -->
+    <div id="memberModal" class="modal">
         <div class="modal-content">
-            <span class="close">×</span>
+            <span class="close">&times;</span>
             <div class="row">
                 <div class="col-md-5">
-                    <img id="modalImage" src="./assets/images/강선영_비례대표.png" alt="" class="modal-image">
+                    <img id="modalImage" src="" alt="" class="modal-image">
                 </div>
                 <div class="col-md-7">
                     <div class="row">
@@ -1115,13 +122,13 @@
                             <p class="fw-bold">이름</p>
                         </div>
                         <div class="col-9">
-                            <p id="modalName">강선영</p>
+                            <p id="modalName"></p>
                         </div>
                         <div class="col-3">
                             <p class="fw-bold">선거구</p>
                         </div>
                         <div class="col-9">
-                            <p id="modalDistrict">비례대표 비례대표</p>
+                            <p id="modalDistrict"></p>
                         </div>
                     </div>
                 </div>
@@ -1129,8 +136,1247 @@
         </div>
     </div>
 
-    <script type="module" src="./assets/js/loadImages.js" defer=""></script>
-    <script type="module" src="./assets/js/script.js" defer=""></script>
+    <!-- Search Section -->
+    <div class="container search-container">
+        <div class="row">
+            <div class="col-md-6">
+                <input type="text" id="nameSearch" class="form-control" placeholder="이름으로 검색">
+            </div>
+            <div class="col-md-6">
+                <input type="text" id="districtSearch" class="form-control" placeholder="지역구로 검색">
+            </div>
+        </div>
+    </div>
 
+    <!-- Cards Grid -->
+    <div class="container">
+        <div class="row row-cols-2 row-cols-md-4 g-2">
 
-</body></html>
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/강대식.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/d1fe9f0902d84f0ba74f721d3298be7f.png" class="card-img-top" alt="강대식">
+        <div class="card-body text-center">
+            <h5 class="card-title">강대식</h5>
+            <p class="card-text">대구 동구군위군을</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/강명구.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/9f095290d68b47638983c7db100c2eb0.jpg" class="card-img-top" alt="강명구">
+        <div class="card-body text-center">
+            <h5 class="card-title">강명구</h5>
+            <p class="card-text">경북 구미시을</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/강민국.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/70f21f66d1ea471192858adb6f379299.png" class="card-img-top" alt="강민국">
+        <div class="card-body text-center">
+            <h5 class="card-title">강민국</h5>
+            <p class="card-text">경남 진주시을</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/강선영.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/89a10eac7851470598886907100ae5ad.jpg" class="card-img-top" alt="강선영">
+        <div class="card-body text-center">
+            <h5 class="card-title">강선영</h5>
+            <p class="card-text">비례대표</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/강승규.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/ec481315df7b49b4b1a0e8761f41ca49.jpg" class="card-img-top" alt="강승규">
+        <div class="card-body text-center">
+            <h5 class="card-title">강승규</h5>
+            <p class="card-text">충남 홍성군예산군</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/고동진.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/8e0621184727401ea5537cbeb1557776.jpg" class="card-img-top" alt="고동진">
+        <div class="card-body text-center">
+            <h5 class="card-title">고동진</h5>
+            <p class="card-text">서울 강남구병</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/곽규택.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/fd163330861a4c5691ba7cfd0ad39ea6.jpg" class="card-img-top" alt="곽규택">
+        <div class="card-body text-center">
+            <h5 class="card-title">곽규택</h5>
+            <p class="card-text">부산 서구동구</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/구자근.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/009fb2abbde940579802b3494f132e85.jpg" class="card-img-top" alt="구자근">
+        <div class="card-body text-center">
+            <h5 class="card-title">구자근</h5>
+            <p class="card-text">경북 구미시갑</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/권성동.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/af3b64d8d85b45dcbccefb6646589be9.png" class="card-img-top" alt="권성동">
+        <div class="card-body text-center">
+            <h5 class="card-title">권성동</h5>
+            <p class="card-text">강원 강릉시</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/권영세.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/f58fcbb4b2f64d05a335da7099f679e7.jpg" class="card-img-top" alt="권영세">
+        <div class="card-body text-center">
+            <h5 class="card-title">권영세</h5>
+            <p class="card-text">서울 용산구</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/권영진.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/3d91cfa36267481a8f860816e419f426.png" class="card-img-top" alt="권영진">
+        <div class="card-body text-center">
+            <h5 class="card-title">권영진</h5>
+            <p class="card-text">대구 달서구병</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/김건.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/500026b7d5dc46a0a3bec595dea313e4.png" class="card-img-top" alt="김건">
+        <div class="card-body text-center">
+            <h5 class="card-title">김건</h5>
+            <p class="card-text">비례대표</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/김기웅.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/4e032a885456487ebe70f143ef373f92.png" class="card-img-top" alt="김기웅">
+        <div class="card-body text-center">
+            <h5 class="card-title">김기웅</h5>
+            <p class="card-text">대구 중구남구</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/김기현.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/57179e16dfac4bfb8ac08d903b93dd39.jpg" class="card-img-top" alt="김기현">
+        <div class="card-body text-center">
+            <h5 class="card-title">김기현</h5>
+            <p class="card-text">울산 남구을</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/김대식.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/a3a98ad4d2b24e3ba8de8de37631a192.png" class="card-img-top" alt="김대식">
+        <div class="card-body text-center">
+            <h5 class="card-title">김대식</h5>
+            <p class="card-text">부산 사상구</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/김도읍.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/63a47955a6b94df381c8f17c18bc1774.png" class="card-img-top" alt="김도읍">
+        <div class="card-body text-center">
+            <h5 class="card-title">김도읍</h5>
+            <p class="card-text">부산 강서구</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/김미애.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/c1a5f2ce1f3c439cbe027e15722925f9.png" class="card-img-top" alt="김미애">
+        <div class="card-body text-center">
+            <h5 class="card-title">김미애</h5>
+            <p class="card-text">부산 해운대구을</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/김민전.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/d856bf1d1b14476f84af3c07c1ea864e.jpg" class="card-img-top" alt="김민전">
+        <div class="card-body text-center">
+            <h5 class="card-title">김민전</h5>
+            <p class="card-text">비례대표</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/김상훈.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/3c232b2892bb448f8d66df3661218621.jpg" class="card-img-top" alt="김상훈">
+        <div class="card-body text-center">
+            <h5 class="card-title">김상훈</h5>
+            <p class="card-text">대구 서구</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/김석기.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/e5a17e900d0e433bb13e351466729064.jpg" class="card-img-top" alt="김석기">
+        <div class="card-body text-center">
+            <h5 class="card-title">김석기</h5>
+            <p class="card-text">경북 경주시</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/김선교.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/c46ff6eaebc3441393b42d4e36d7a8c6.jpg" class="card-img-top" alt="김선교">
+        <div class="card-body text-center">
+            <h5 class="card-title">김선교</h5>
+            <p class="card-text">경기 여주시양평군</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/김성원.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/0883fdfd169248c19f2311f26e1c2577.jpg" class="card-img-top" alt="김성원">
+        <div class="card-body text-center">
+            <h5 class="card-title">김성원</h5>
+            <p class="card-text">경기 동두천시양주시연천구을</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/김소희.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/83b1ec78867e41e39d20d41d3a796f83.png" class="card-img-top" alt="김소희">
+        <div class="card-body text-center">
+            <h5 class="card-title">김소희</h5>
+            <p class="card-text">비례대표</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/김승수.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/ed6fa85a063842c59f5cfc4cca90eafb.jpg" class="card-img-top" alt="김승수">
+        <div class="card-body text-center">
+            <h5 class="card-title">김승수</h5>
+            <p class="card-text">대구 북구을</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/김용태.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/ef99cb0a6cee471bb9769a46bc62c459.jpg" class="card-img-top" alt="김용태">
+        <div class="card-body text-center">
+            <h5 class="card-title">김용태</h5>
+            <p class="card-text">경기 포천시가평군</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/김위상.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/3b0e41223e344b809f45b64084cde1af.png" class="card-img-top" alt="김위상">
+        <div class="card-body text-center">
+            <h5 class="card-title">김위상</h5>
+            <p class="card-text">비례대표</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/김은혜.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/2d0fedee640c4683b571177b2f21e1c2.jpg" class="card-img-top" alt="김은혜">
+        <div class="card-body text-center">
+            <h5 class="card-title">김은혜</h5>
+            <p class="card-text">경기 성남시분당구을</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/김장겸.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/51872f0dbc5948d0b7e94700969cf6ec.jpg" class="card-img-top" alt="김장겸">
+        <div class="card-body text-center">
+            <h5 class="card-title">김장겸</h5>
+            <p class="card-text">비례대표</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/김재섭.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/4dda6952ecb54d03a2bfc80764322300.png" class="card-img-top" alt="김재섭">
+        <div class="card-body text-center">
+            <h5 class="card-title">김재섭</h5>
+            <p class="card-text">서울 도봉구갑</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/김정재.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/82a52130b3cd42949f08c91c95b1bd54.png" class="card-img-top" alt="김정재">
+        <div class="card-body text-center">
+            <h5 class="card-title">김정재</h5>
+            <p class="card-text">경북 포항시북구</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/김종양.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/d552d62c9a174c3e95f785adaeb18ccf.jpg" class="card-img-top" alt="김종양">
+        <div class="card-body text-center">
+            <h5 class="card-title">김종양</h5>
+            <p class="card-text">경남 창원시의창구</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/김태호.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/f400573a310e49048ac59ffe27438e82.png" class="card-img-top" alt="김태호">
+        <div class="card-body text-center">
+            <h5 class="card-title">김태호</h5>
+            <p class="card-text">경남 양산시을</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/김형동.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/a8666f5ad131416fb853f840dc4d66e6.jpg" class="card-img-top" alt="김형동">
+        <div class="card-body text-center">
+            <h5 class="card-title">김형동</h5>
+            <p class="card-text">경북 안동시예천군</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/김희정.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/b30ba14b467a4303b40bdbceedfdc68c.jpg" class="card-img-top" alt="김희정">
+        <div class="card-body text-center">
+            <h5 class="card-title">김희정</h5>
+            <p class="card-text">부산 연제구</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/나경원.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/563d61a4466c42c8be2c4979c00e5060.png" class="card-img-top" alt="나경원">
+        <div class="card-body text-center">
+            <h5 class="card-title">나경원</h5>
+            <p class="card-text">서울 동작구을</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/박대출.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/8abadb32da7241088899ad56720b57e1.png" class="card-img-top" alt="박대출">
+        <div class="card-body text-center">
+            <h5 class="card-title">박대출</h5>
+            <p class="card-text">경남 진주시갑</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/박덕흠.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/ad05c3a202f641aca68b663b1fe9c36b.jpg" class="card-img-top" alt="박덕흠">
+        <div class="card-body text-center">
+            <h5 class="card-title">박덕흠</h5>
+            <p class="card-text">충북 보은군옥천군영동군괴산군</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/박상웅.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/595e340185c0448fb92e5a0d861f9c47.jpg" class="card-img-top" alt="박상웅">
+        <div class="card-body text-center">
+            <h5 class="card-title">박상웅</h5>
+            <p class="card-text">경남 밀양시의령군함안군창녕군</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/박성민.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/be7cbbb1752146ae809622d1e3da80d4.png" class="card-img-top" alt="박성민">
+        <div class="card-body text-center">
+            <h5 class="card-title">박성민</h5>
+            <p class="card-text">울산 중구</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/박성훈.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/6b196b02e4744aeebe20983e2f9ad5b8.png" class="card-img-top" alt="박성훈">
+        <div class="card-body text-center">
+            <h5 class="card-title">박성훈</h5>
+            <p class="card-text">부산 북구을</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/박수민.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/9ad8cb999cab47f6b28aa03733c969d0.jpg" class="card-img-top" alt="박수민">
+        <div class="card-body text-center">
+            <h5 class="card-title">박수민</h5>
+            <p class="card-text">서울 강남구을</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/박수영.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/b63472273c424b11a07ccb8083aa9d53.png" class="card-img-top" alt="박수영">
+        <div class="card-body text-center">
+            <h5 class="card-title">박수영</h5>
+            <p class="card-text">부산 남구</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/박정하.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/7f00916d90f54cac993195490511242b.jpg" class="card-img-top" alt="박정하">
+        <div class="card-body text-center">
+            <h5 class="card-title">박정하</h5>
+            <p class="card-text">강원 원주시갑</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/박정훈.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/2933458ec5044bdeb30564f216848655.jpg" class="card-img-top" alt="박정훈">
+        <div class="card-body text-center">
+            <h5 class="card-title">박정훈</h5>
+            <p class="card-text">서울 송파구갑</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/박준태.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/689958442da64be4b0a1aaeb2003038a.png" class="card-img-top" alt="박준태">
+        <div class="card-body text-center">
+            <h5 class="card-title">박준태</h5>
+            <p class="card-text">비례대표</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/박충권.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/b51683ab9a42410bbf52570a33ca2c48.jpg" class="card-img-top" alt="박충권">
+        <div class="card-body text-center">
+            <h5 class="card-title">박충권</h5>
+            <p class="card-text">비례대표</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/박형수.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/45a932e98e3545108741802f7193bf09.jpg" class="card-img-top" alt="박형수">
+        <div class="card-body text-center">
+            <h5 class="card-title">박형수</h5>
+            <p class="card-text">경북 의성군청송군영덕군울진군</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/배준영.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/c0680ca1b0ca410191f6597484db924f.png" class="card-img-top" alt="배준영">
+        <div class="card-body text-center">
+            <h5 class="card-title">배준영</h5>
+            <p class="card-text">인천 중구강화군옹진군</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/배현진.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/fc08975adb724900bfacc85909c69d02.png" class="card-img-top" alt="배현진">
+        <div class="card-body text-center">
+            <h5 class="card-title">배현진</h5>
+            <p class="card-text">서울 송파구을</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/백종헌.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/335e79371cec41a7991431788b9fead9.jpg" class="card-img-top" alt="백종헌">
+        <div class="card-body text-center">
+            <h5 class="card-title">백종헌</h5>
+            <p class="card-text">부산 금정구</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/서명옥.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/6dce07c39f264381aeba58b69c846cd0.jpg" class="card-img-top" alt="서명옥">
+        <div class="card-body text-center">
+            <h5 class="card-title">서명옥</h5>
+            <p class="card-text">서울 강남구갑</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/서범수.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/dc9bc21d63ef4cd5968a27eadd34e0f6.jpg" class="card-img-top" alt="서범수">
+        <div class="card-body text-center">
+            <h5 class="card-title">서범수</h5>
+            <p class="card-text">울산 울주군</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/서일준.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/fcbf1b4b1aa24151a28e85b4d190291c.jpg" class="card-img-top" alt="서일준">
+        <div class="card-body text-center">
+            <h5 class="card-title">서일준</h5>
+            <p class="card-text">경남 거제시</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/서지영.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/a7e0edac99dd4fb89cbbc8bec657f222.png" class="card-img-top" alt="서지영">
+        <div class="card-body text-center">
+            <h5 class="card-title">서지영</h5>
+            <p class="card-text">부산 동래구</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/서천호.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/45d0d0758d9b4e1e8e2b86434770e2fc.jpg" class="card-img-top" alt="서천호">
+        <div class="card-body text-center">
+            <h5 class="card-title">서천호</h5>
+            <p class="card-text">경남 사천시남해군하동군</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/성일종.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/8ac7d150f3434b12a31e2d441beea36c.jpg" class="card-img-top" alt="성일종">
+        <div class="card-body text-center">
+            <h5 class="card-title">성일종</h5>
+            <p class="card-text">충남 서산시태안군</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/송석준.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/21eedc628d844950876d6cdb52a5988a.png" class="card-img-top" alt="송석준">
+        <div class="card-body text-center">
+            <h5 class="card-title">송석준</h5>
+            <p class="card-text">경기 이천시</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/송언석.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/b3c309f7dfd34dd486d7f60acfcd3254.JPG" class="card-img-top" alt="송언석">
+        <div class="card-body text-center">
+            <h5 class="card-title">송언석</h5>
+            <p class="card-text">경북 김천시</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/신동욱.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/bef0ced14c4241cbbc5181e2bc9805ef.jpg" class="card-img-top" alt="신동욱">
+        <div class="card-body text-center">
+            <h5 class="card-title">신동욱</h5>
+            <p class="card-text">서울 서초구을</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/신성범.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/90ebb7eaa3a648f5a96eea2037be33bf.jpg" class="card-img-top" alt="신성범">
+        <div class="card-body text-center">
+            <h5 class="card-title">신성범</h5>
+            <p class="card-text">경남 산청군함양군거창군합천군</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/안상훈.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/ba1a4675a60a42d8ad14b64f5f35a93c.png" class="card-img-top" alt="안상훈">
+        <div class="card-body text-center">
+            <h5 class="card-title">안상훈</h5>
+            <p class="card-text">비례대표</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/엄태영.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/1c796117e6084fc0b8d6b5ee4e44c077.png" class="card-img-top" alt="엄태영">
+        <div class="card-body text-center">
+            <h5 class="card-title">엄태영</h5>
+            <p class="card-text">충북 제천시단양군</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/우재준.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/2ef1338017ed47cfb9106a90b6262bd7.png" class="card-img-top" alt="우재준">
+        <div class="card-body text-center">
+            <h5 class="card-title">우재준</h5>
+            <p class="card-text">대구 북구갑</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/유상범.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/9d4701db5dcd4eafa39d36c1dbc44e47.jpg" class="card-img-top" alt="유상범">
+        <div class="card-body text-center">
+            <h5 class="card-title">유상범</h5>
+            <p class="card-text">강원 홍천군횡성군영월군평창군</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/유영하.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/32a8a3160f2e48dea973ec7f54668fa7.jpg" class="card-img-top" alt="유영하">
+        <div class="card-body text-center">
+            <h5 class="card-title">유영하</h5>
+            <p class="card-text">대구 달서구갑</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/유용원.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/b031714b64d9427ea119a6225c44bf1c.jpg" class="card-img-top" alt="유용원">
+        <div class="card-body text-center">
+            <h5 class="card-title">유용원</h5>
+            <p class="card-text">비례대표</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/윤상현.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/c55454347242441c9e75c5058f829b06.png" class="card-img-top" alt="윤상현">
+        <div class="card-body text-center">
+            <h5 class="card-title">윤상현</h5>
+            <p class="card-text">인천 동구미추홀구을</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/윤영석.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/cb71903baa8340718ea02ae96cd6a25f.jpg" class="card-img-top" alt="윤영석">
+        <div class="card-body text-center">
+            <h5 class="card-title">윤영석</h5>
+            <p class="card-text">경남 양산시갑</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/윤재옥.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/d29bdfffbe0f4525ad4b74fa9b5482e5.png" class="card-img-top" alt="윤재옥">
+        <div class="card-body text-center">
+            <h5 class="card-title">윤재옥</h5>
+            <p class="card-text">대구 달서구을</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/윤한홍.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/d175dc8a752d47059aa74a230ee93a5c.jpg" class="card-img-top" alt="윤한홍">
+        <div class="card-body text-center">
+            <h5 class="card-title">윤한홍</h5>
+            <p class="card-text">경남 창원시마산회원구</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/이달희.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/65be51449b5f4f8fb007b5bf0f9bd3e2.png" class="card-img-top" alt="이달희">
+        <div class="card-body text-center">
+            <h5 class="card-title">이달희</h5>
+            <p class="card-text">비례대표</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/이만희.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/408f525c91fc4e93aa0c766707a7d120.jpg" class="card-img-top" alt="이만희">
+        <div class="card-body text-center">
+            <h5 class="card-title">이만희</h5>
+            <p class="card-text">경북 영천시청도군</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/이상휘.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/a0d11eb1900441c29295d0e659f43833.jpg" class="card-img-top" alt="이상휘">
+        <div class="card-body text-center">
+            <h5 class="card-title">이상휘</h5>
+            <p class="card-text">경북 포항시남구울릉군</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/이성권.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/5b2cfeea639e41b0a8007c602631c659.png" class="card-img-top" alt="이성권">
+        <div class="card-body text-center">
+            <h5 class="card-title">이성권</h5>
+            <p class="card-text">부산 사하구갑</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/이양수.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/1496a4de2b2e4a4fb86597cef973a4a3.jpg" class="card-img-top" alt="이양수">
+        <div class="card-body text-center">
+            <h5 class="card-title">이양수</h5>
+            <p class="card-text">강원 속초시인제군고성군양양군</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/이인선.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/f7214149825143218b24268f4de14974.jpg" class="card-img-top" alt="이인선">
+        <div class="card-body text-center">
+            <h5 class="card-title">이인선</h5>
+            <p class="card-text">대구 수성구을</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/이종배.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/1a333609d12f4175be43c95f32c57886.png" class="card-img-top" alt="이종배">
+        <div class="card-body text-center">
+            <h5 class="card-title">이종배</h5>
+            <p class="card-text">충북 충주시</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/이종욱.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/28fa12120325440fbd63d9953bcfa03f.png" class="card-img-top" alt="이종욱">
+        <div class="card-body text-center">
+            <h5 class="card-title">이종욱</h5>
+            <p class="card-text">경남 창원시진해구</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/이철규.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/605672fb126e40f5af71254fa546f3cd.jpg" class="card-img-top" alt="이철규">
+        <div class="card-body text-center">
+            <h5 class="card-title">이철규</h5>
+            <p class="card-text">강원 동해시태백시삼척시정선군</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/이헌승.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/e850e8db958c416bb749d3a5c77c55ae.jpg" class="card-img-top" alt="이헌승">
+        <div class="card-body text-center">
+            <h5 class="card-title">이헌승</h5>
+            <p class="card-text">부산 부산진구을</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/인요한.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/ee1d406c077b4690895ca3fd508428e9.png" class="card-img-top" alt="인요한">
+        <div class="card-body text-center">
+            <h5 class="card-title">인요한</h5>
+            <p class="card-text">비례대표</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/임이자.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/c7818d8fbee2421b93382a592e6f096e.png" class="card-img-top" alt="임이자">
+        <div class="card-body text-center">
+            <h5 class="card-title">임이자</h5>
+            <p class="card-text">경북 상주시문경시 </p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/임종득.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/2428b9f1f3534b0fa71adf578e168d6c.jpg" class="card-img-top" alt="임종득">
+        <div class="card-body text-center">
+            <h5 class="card-title">임종득</h5>
+            <p class="card-text">경북 영주시영양군봉화군</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/장동혁.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/b2f14aea45064028b066431bce8d2d54.png" class="card-img-top" alt="장동혁">
+        <div class="card-body text-center">
+            <h5 class="card-title">장동혁</h5>
+            <p class="card-text">충남 보령시서천군</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/정동만.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/7ea90a4995764320b80842a02f9c1220.jpg" class="card-img-top" alt="정동만">
+        <div class="card-body text-center">
+            <h5 class="card-title">정동만</h5>
+            <p class="card-text">부산 기장군</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/정성국.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/a02c8dbf04f44c91a1ef88b432f9e220.jpg" class="card-img-top" alt="정성국">
+        <div class="card-body text-center">
+            <h5 class="card-title">정성국</h5>
+            <p class="card-text">부산 부산진구갑</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/정연욱.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/d43e70cb8c88464e95f82b0f28a4ac5e.jpg" class="card-img-top" alt="정연욱">
+        <div class="card-body text-center">
+            <h5 class="card-title">정연욱</h5>
+            <p class="card-text">부산 수영구</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/정점식.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/a50392c4f73b4699bed10d70dccf5ae2.jpg" class="card-img-top" alt="정점식">
+        <div class="card-body text-center">
+            <h5 class="card-title">정점식</h5>
+            <p class="card-text">경남 통영시고성군</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/정희용.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/0d948db5655245a6afac2fa7beb66e81.png" class="card-img-top" alt="정희용">
+        <div class="card-body text-center">
+            <h5 class="card-title">정희용</h5>
+            <p class="card-text">경북 고령군성주군칠곡군</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/조경태.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/979f97345f794d5892e7b8cff8a7aa45.jpg" class="card-img-top" alt="조경태">
+        <div class="card-body text-center">
+            <h5 class="card-title">조경태</h5>
+            <p class="card-text">부산 사하구을</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/조배숙.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/4927504637a6435c84ff327c77eaf735.jpg" class="card-img-top" alt="조배숙">
+        <div class="card-body text-center">
+            <h5 class="card-title">조배숙</h5>
+            <p class="card-text">비례대표</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/조승환.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/c4da5dd92ac649af8262ead37610dc29.jpg" class="card-img-top" alt="조승환">
+        <div class="card-body text-center">
+            <h5 class="card-title">조승환</h5>
+            <p class="card-text">부산 중구영도구</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/조은희.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/67f9e0c2b48249b3b008743913f7ca25.jpg" class="card-img-top" alt="조은희">
+        <div class="card-body text-center">
+            <h5 class="card-title">조은희</h5>
+            <p class="card-text">서울 서초구갑</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/조정훈.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/adbf0bf5375e47fba83d7834d3e70a0d.jpg" class="card-img-top" alt="조정훈">
+        <div class="card-body text-center">
+            <h5 class="card-title">조정훈</h5>
+            <p class="card-text">서울 마포구갑</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/조지연.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/56eed1de2412435f98a26e9318f5eb96.png" class="card-img-top" alt="조지연">
+        <div class="card-body text-center">
+            <h5 class="card-title">조지연</h5>
+            <p class="card-text">경북 경산시</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/주진우.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/15ec75dba7fc4dd090fae8b3a13e05c0.JPG" class="card-img-top" alt="주진우">
+        <div class="card-body text-center">
+            <h5 class="card-title">주진우</h5>
+            <p class="card-text">부산 해운대구갑</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/주호영.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/18605df0f43547089061fa7f6a63f311.jpg" class="card-img-top" alt="주호영">
+        <div class="card-body text-center">
+            <h5 class="card-title">주호영</h5>
+            <p class="card-text">대구 수성구갑</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/진종오.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/c39a39eef1a54ac79afc0124ac6a1598.jpg" class="card-img-top" alt="진종오">
+        <div class="card-body text-center">
+            <h5 class="card-title">진종오</h5>
+            <p class="card-text">비례대표</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/최보윤.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/084ad27bfd414d249c73484f8a1abe40.png" class="card-img-top" alt="최보윤">
+        <div class="card-body text-center">
+            <h5 class="card-title">최보윤</h5>
+            <p class="card-text">비례대표</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/최수진.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/748a08387b2f4395b76fc870d2184cbf.png" class="card-img-top" alt="최수진">
+        <div class="card-body text-center">
+            <h5 class="card-title">최수진</h5>
+            <p class="card-text">비례대표</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/최은석.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/9434f70d32fa4f5d9fdf1765e541b175.png" class="card-img-top" alt="최은석">
+        <div class="card-body text-center">
+            <h5 class="card-title">최은석</h5>
+            <p class="card-text">대구 동구군위군갑</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/최형두.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/fbac5267e24343b98623752d6c854616.jpg" class="card-img-top" alt="최형두">
+        <div class="card-body text-center">
+            <h5 class="card-title">최형두</h5>
+            <p class="card-text">경남 창원시마산합포구</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/추경호.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/c7d6cfa2eaa14041bb6408aba44ae0ab.png" class="card-img-top" alt="추경호">
+        <div class="card-body text-center">
+            <h5 class="card-title">추경호</h5>
+            <p class="card-text">대구 달성군</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/한기호.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/9bb2d649d55a495d99c6750cc124e5bf.png" class="card-img-top" alt="한기호">
+        <div class="card-body text-center">
+            <h5 class="card-title">한기호</h5>
+            <p class="card-text">강원 춘천시철원군화천군양구군을</p>
+        </div>
+    </div>
+</div>
+
+<!-- Card -->
+<div class="col">
+    <div class="card h-100" data-full-img="https://face.neran24.info/face/한지아.webp">
+        <img src="https://www.assembly.go.kr/static/portal/img/openassm/new/thumb/5156034c3ba143c3bae113a864791bcd.jpg" class="card-img-top" alt="한지아">
+        <div class="card-body text-center">
+            <h5 class="card-title">한지아</h5>
+            <p class="card-text">비례대표</p>
+        </div>
+    </div>
+</div>
+        
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const nameSearch = document.getElementById('nameSearch');
+            const districtSearch = document.getElementById('districtSearch');
+            const cards = document.querySelectorAll('.col');
+            const modal = document.getElementById('memberModal');
+            const closeBtn = document.querySelector('.close');
+            
+            // 모달 관련 요소들
+            const modalImage = document.getElementById('modalImage');
+            const modalName = document.getElementById('modalName');
+            const modalDistrict = document.getElementById('modalDistrict');
+
+            // 카드 클릭 이벤트
+            cards.forEach(card => {
+                card.addEventListener('click', function() {
+                    const cardDiv = card.querySelector('.card');
+                    const fullImg = cardDiv.dataset.fullImg;
+                    const name = card.querySelector('.card-title');
+                    const district = card.querySelector('.card-text');
+
+                    modalImage.src = fullImg;
+                    modalImage.alt = name.textContent;
+                    modalName.textContent = name.textContent;
+                    modalDistrict.textContent = district.textContent;
+
+                    modal.style.display = 'block';
+                });
+            });
+
+            // 모달 닫기
+            closeBtn.onclick = function() {
+                modal.style.display = 'none';
+                modalImage.src = ''; // 모달이 닫힐 때 이미지 초기화
+            }
+
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = 'none';
+                    modalImage.src = ''; // 모달이 닫힐 때 이미지 초기화
+                }
+            }
+
+            function filterCards() {
+                const nameValue = nameSearch.value.toLowerCase();
+                const districtValue = districtSearch.value.toLowerCase();
+
+                cards.forEach(card => {
+                    const name = card.querySelector('.card-title').textContent.toLowerCase();
+                    const district = card.querySelector('.card-text').textContent.toLowerCase();
+                    
+                    const nameMatch = name.includes(nameValue);
+                    const districtMatch = district.includes(districtValue);
+
+                    if (nameMatch && districtMatch) {
+                        card.classList.remove('hidden');
+                    } else {
+                        card.classList.add('hidden');
+                    }
+                });
+            }
+
+            nameSearch.addEventListener('input', filterCards);
+            districtSearch.addEventListener('input', filterCards);
+        });
+    </script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"8f098fbec982dd3e","version":"2024.10.5","r":1,"token":"700de28ec4e54b39955067f63befb150","serverTiming":{"name":{"cfExtPri":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}}}' crossorigin="anonymous"></script>
+</body>
+</html>
