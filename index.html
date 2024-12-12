@@ -139,10 +139,27 @@
     <!-- Search Section -->
     <div class="container search-container">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-4">
                 <input type="text" id="nameSearch" class="form-control" placeholder="이름으로 검색">
             </div>
-            <div class="col-md-6">
+            <div class="col-md-4">
+                <select id="regionSelect" class="form-control">
+                    <option value="">지역 선택</option>
+                    <option value="강원">강원</option>
+                    <option value="경기">경기</option>
+                    <option value="경남">경남</option>
+                    <option value="경북">경북</option>
+                    <option value="대구">대구</option>
+                    <option value="부산">부산</option>
+                    <option value="비례대표">비례대표</option>
+                    <option value="서울">서울</option>
+                    <option value="울산">울산</option>
+                    <option value="인천">인천</option>
+                    <option value="충남">충남</option>
+                    <option value="충북">충북</option>
+                </select>
+            </div>
+            <div class="col-md-4">
                 <input type="text" id="districtSearch" class="form-control" placeholder="지역구로 검색">
             </div>
         </div>
@@ -1314,6 +1331,7 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const nameSearch = document.getElementById('nameSearch');
+            const regionSelect = document.getElementById('regionSelect');
             const districtSearch = document.getElementById('districtSearch');
             const cards = document.querySelectorAll('.col');
             const modal = document.getElementById('memberModal');
@@ -1356,16 +1374,19 @@
 
             function filterCards() {
                 const nameValue = nameSearch.value.toLowerCase();
+                const regionValue = regionSelect.value.toLowerCase();
                 const districtValue = districtSearch.value.toLowerCase();
 
                 cards.forEach(card => {
                     const name = card.querySelector('.card-title').textContent.toLowerCase();
+                    const region = card.querySelector('.card-text').textContent.toLowerCase();
                     const district = card.querySelector('.card-text').textContent.toLowerCase();
                     
                     const nameMatch = name.includes(nameValue);
+                    const regionMatch = district.includes(regionValue);
                     const districtMatch = district.includes(districtValue);
 
-                    if (nameMatch && districtMatch) {
+                    if (nameMatch && regionMatch && districtMatch) {
                         card.classList.remove('hidden');
                     } else {
                         card.classList.add('hidden');
@@ -1374,6 +1395,7 @@
             }
 
             nameSearch.addEventListener('input', filterCards);
+            regionSelect.addEventListener('change', filterCards);
             districtSearch.addEventListener('input', filterCards);
         });
     </script>
